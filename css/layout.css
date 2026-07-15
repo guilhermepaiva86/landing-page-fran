@@ -1,0 +1,12 @@
+.container {
+  width: 90%;
+  max-width: var(--container-width);
+
+  margin: 0 auto;
+}
+
+.section {
+  padding:
+    var(--space-xl)
+    0;
+}
