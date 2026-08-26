@@ -15,11 +15,6 @@
 }
 
 
-body {
-
-}
-
-
 /* =========================
    HEADER
 ========================= */
@@ -33,7 +28,6 @@ header {
   width: 100%;
   z-index: 1000;
   box-shadow: var(--shadow-md);
-  padding: var(--space-xs) 0;
   border-bottom: 2px solid var(--color-accent);
 }
 
@@ -53,19 +47,17 @@ header .header-container {
   flex-direction: column;
 }
 
-.header-top h1 {
-  font-family: var(--font-family-base);
-  color: var(--color-white);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
 .header-top p {
-  font-family: var(--font-family-base);
-  color: var(--color-gray-200);
+  font-family: var(--font-titles);
+  color: var(--color-white);
   font-size: 0.8rem;
   font-weight: 400;
+}
+
+.header-container img {
+  max-height: 75px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Menu de Navegação */
@@ -75,7 +67,7 @@ nav {
 }
 
 nav a {
-  font-family: var(--font-family-base);
+  font-family: var(--font-titles);
   color: var(--color-white);
   text-decoration: none;
   font-weight: 600;
@@ -123,7 +115,7 @@ body {
   }
   
   body {
-    padding-top: 90px; /* Ajuste ligeiramente maior para o mobile */
+    padding-top: 120px; /* Ajuste ligeiramente maior para o mobile */
   }
 }
 
@@ -138,7 +130,7 @@ body {
   display: flex;
   align-items: center;
 
-  background: var(--color-gray-100);
+  background: var(--color-white);
 }
 
 .hero-content {
@@ -155,6 +147,7 @@ body {
 
 .hero-title {
 
+  font-family: var(--font-titles);
   font-size: clamp(
     2.5rem,
     5vw,
@@ -172,6 +165,7 @@ body {
 
 .hero-description {
 
+  font-family: var(--font-base);
   font-size: 1.2rem;
 
   line-height: 1.6;
@@ -215,7 +209,7 @@ body {
   height: 50px; /* Mantém a altura rigorosamente idêntica */
   padding: 0 var(--space-sm);
   gap: var(--space-xs);
-  font-family: var(--font-family-base);
+  font-family: var(--font-titles);
   font-size: 0.95rem;
   font-weight: 600;
   border-radius: var(--radius-sm);
@@ -246,20 +240,16 @@ body {
 
 .hero-benefits {
   list-style: none;
-
   display: flex;
   flex-direction: column;
-
+  align-items: flex-start;
   gap: 1rem;
-
-
+  font-family: var(--font-base);
   padding: 1rem;
-
   background: white;
-
   border-radius: var(--radius-md);
-
   box-shadow: var(--shadow-sm);
+
   
 }
 
@@ -272,7 +262,7 @@ body {
 
   font-size: 1.125rem;
 
-  color: var(--color-gray-900);
+  color: var(--color-primary-dark);
 }
 
 .hero-benefits li::before {
@@ -289,7 +279,7 @@ body {
 
   border-radius: 50%;
 
-  background: var(--color-accent);
+  background: var(--color-olive);
 
   color: white;
 
@@ -306,14 +296,19 @@ body {
     grid-template-columns:
       1fr;
 
-    text-align:
+    text-align: 
       center;
   }
 
-  .hero-actions {
+  .hero-actions{
 
     justify-content:
       center;
+  }
+
+  .hero-benefits li{
+
+    text-align: left;
   }
 }
 
@@ -323,17 +318,88 @@ body {
 ========================= */
 
 #sobre {
-
+    background-color: var(--color-white); 
+    padding: var(--space-xs) var(--space-sm);
 }
 
-header,
+.sobre-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 1000px; /* Aumentamos ligeiramente a largura máxima do container */
+    margin: 0 auto;
+}
+
+/* Container da Logo/Símbolo */
+.sobre-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.sobre-logo img {
+    width: 100%;
+    max-width: 240px; /* Tamanho maior já no mobile */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Container dos Textos */
+.sobre-textos {
+    text-align: center;
+    width: 100%;
+}
+
+.sobre-textos h2 {
+    font-family: var(--font-titles);
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.sobre-textos p {
+    font-family: var(--font-text);
+    color: var(--color-primary-dark);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+}
+
+/* =========================
+   DESKTOP (768px+)
+========================= */
+@media (min-width: 768px) {
+    .sobre-conteudo {
+        flex-direction: row;
+        align-items: center; /* Centraliza a logo verticalmente em relação à altura do bloco de texto */
+        text-align: left;
+        gap: 4rem;
+    }
+    
+    /* Define a proporção das colunas */
+    .sobre-logo {
+        flex: 1; /* Ocupa 1 parte do espaço */
+        max-width: 380px; /* Limite do container da logo */
+    }
+
+    .sobre-logo img {
+        max-width: 320px; /* Aumentado para equilibrar visualmente com a altura do texto */
+    }
+
+    .sobre-textos {
+        flex: 1.5; /* Ocupa 1.5 partes do espaço (dando um pouco mais de respiro ao texto) */
+        text-align: left;
+    }
+}
+
 section,
 footer {
     border: 1px solid LIGHTGRAY;
 }
 
 section {
-    padding: 40px;
     margin-bottom: 40px;
 }
 
@@ -439,7 +505,7 @@ section {
 }
 
 /* =========================
-   CONTATO
+   CONTATO (NAO USADO)
 ========================= */
 #contato {
   padding: var(--space-xl) var(--space-sm);
@@ -473,7 +539,7 @@ section {
 /* Rótulos (Labels) */
 #contato label {
   display: block;
-  font-family: var(--font-family-base);
+  font-family: var(--font-base);
   color: var(--color-gray-900);
   font-weight: 600;
   font-size: 0.9rem;
@@ -486,7 +552,7 @@ section {
 #contato textarea {
   width: 100%;
   padding: 0.75rem var(--space-sm);
-  font-family: var(--font-family-base);
+  font-family: var(--font-base);
   color: var(--color-gray-900);
   background-color: var(--color-white);
   border: 1px solid var(--color-gray-300);
@@ -524,7 +590,7 @@ section {
   color: var(--color-white);
   border: none;
   border-radius: var(--radius-sm);
-  font-family: var(--font-family-base);
+  font-family: var(--font-base);
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
@@ -540,3 +606,85 @@ section {
   transform: scale(0.98);
 }
 
+/* =========================
+   RODAPÉ 
+========================= */
+
+#rodape {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    /* Usando espaçamento bem reduzido no topo e na base */
+    padding: var(--space-xs) var(--space-sm);
+}
+
+.rodape-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Reduzido de 3rem para 1.5rem */
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Logo */
+.rodape-logo img {
+    max-width: 160px;
+    height: auto;
+    display: block; /* Remove o espaço extra inferior nativo de elementos inline */
+}
+
+/* Bloco de Contato */
+.rodape-contato h3 {
+    font-family: var(--font-titles);
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    margin: 0 0 0.5rem 0; /* Zeramos a margem superior e reduzimos a inferior */
+}
+
+.rodape-contato ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Zerado para não empurrar nada */
+}
+
+.rodape-contato li, 
+.rodape-contato a {
+    font-family: var(--font-base);
+    color: var(--color-white);
+    text-decoration: none;
+    line-height: 1.6; /* Reduzido de 2.0 para 1.6 para aproximar as linhas */
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.rodape-contato a:hover {
+    color: var(--color-olive); 
+}
+
+/* Linha de Créditos / Copyright */
+.rodape-creditos {
+    text-align: center;
+    margin-top: 1.5rem; /* Reduzido de 4rem para 1.5rem */
+    padding-top: 1rem;
+    border-top: 1px solid rgba(237, 232, 223, 0.15);
+}
+
+.rodape-creditos p {
+    font-family: var(--font-base);
+    font-size: 0.8rem;
+    color: var(--color-fendy);
+    margin: 0; /* Zerada a margem padrão do parágrafo */
+}
+
+/* =========================
+   DESKTOP (768px+)
+========================= */
+@media (min-width: 768px) {
+    .rodape-conteudo {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; /* ALINHAMENTO PERFEITO: alinha a logo e os contatos pelo centro na horizontal */
+        text-align: left;
+    }
+}

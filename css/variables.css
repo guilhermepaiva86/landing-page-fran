@@ -2,12 +2,16 @@
 
   /* Cores */
 
-  --color-primary: #6B4F3A;
-  --color-primary-dark: #4A3526;
+  /*Primary*/
+  --color-primary: #2c3d26;
+  --color-primary-dark: #352118;
+  --color-accent: #cfc9bd;
+  --color-white: #ede8df;
 
- --color-accent: #C8A97E;
-
-  --color-white: #ffffff;
+  /*Secondary*/
+  --color-wine: #3d1515;
+  --color-fendy: #a59b91;
+  --color-olive: #9d9580;
 
   --color-gray-100: #F8F4EE;
   --color-gray-200: #EFE7DC;
@@ -19,7 +23,11 @@
 
   /* Fontes */
 
-  --font-family-base:
+  --font-titles:
+    "Mango Dream Medium",
+    sans-serif;
+
+  --font-base:
     "Inter",
     sans-serif;
 

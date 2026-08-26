@@ -23,18 +23,19 @@
     <header>
         <div class="header-container">
             <div class="header-top">
-                <h1>Fran Pereira</h1>
 
                 <p>
                     Corretora de imóveis em Mogi das Cruzes - SP
                 </p>
             </div>
 
+            <img src="assets/images/logo-offwhite.png" alt="Fran Pereira - Corretora de Imóveis">
+
             <nav>
                 <a href="#sobre">Sobre</a>
                 <a href="#imoveis">Imóveis</a>
-                <a href="#depoimentos">Depoimentos</a>
-                <a href="#contato">Contato</a>
+                <!-- <a href="#depoimentos">Depoimentos</a> -->
+                <!-- <a href="#contato">Contato</a> -->
             </nav>
         </div>
     </header>
@@ -50,11 +51,11 @@
                 <div class="hero-text">
 
                     <h1 class="hero-title">
-                    Encontre o imóvel certo para sua família e seus objetivos.
+                    Encontre o imóvel certo para sua família e seus objetivos
                     </h1>
 
                     <p class="hero-description">
-                    Compra, venda e investimento imobiliário com atendimento personalizado.
+                    Compra, venda e investimento imobiliário com atendimento personalizado
                     </p>
 
                 
@@ -99,20 +100,25 @@
 
         <!-- SOBRE -->
         <section id="sobre">
+            <div class="container sobre-conteudo">
+        
+                <div class="sobre-logo">
+                    <img src="assets/images/chave1.png" alt="Fran Pereira - Corretora de Imóveis em Mogi das Cruzes">
+                </div>
 
-            <h2>Sobre</h2>
-
-            <p>
-                Fran Pereira atua no mercado imobiliário de Mogi das Cruzes,
-                oferecendo atendimento personalizado para clientes que buscam
-                imóveis de médio e alto padrão.
-            </p>
-
-            <p>
-                Atendimento humanizado, segurança na negociação e suporte
-                durante todo o processo de compra e venda.
-            </p>
-
+            <div class="sobre-textos">
+                <h2>Sobre</h2>
+                
+                <p>
+                    Oferecemos um atendimento imobiliário para quem entende que comprar ou vender um imóvel é mais do que uma transação
+                </p>
+                
+                <p>
+                    Sem pressa, sem pressão e com a responsabilidade de quem sabe que está lidando com histórias, sonhos e novos começos
+                </p>
+            </div>
+        
+            </div>
         </section>
 
         <!-- IMÓVEIS -->
@@ -124,74 +130,15 @@
             <button class="carousel-btn prev" id="prevBtn" aria-label="Imóvel anterior">&#10094;</button>
             <button class="carousel-btn next" id="nextBtn" aria-label="Próximo imóvel">&#10095;</button>
 
-            <!-- Trilho do Carrossel -->
+            <!-- Trilho do Carrossel (preenchido dinamicamente pelo properties.js) -->
             <div class="carousel-track" id="carouselTrack">
-
-                <article class="carousel-item">
-                    <h3>Casa em Condomínio</h3>
-                    <p>Bairro: Vila Oliveira</p>
-                    <p>4 quartos • 3 suítes • área gourmet</p>
-                    <p>R$ 1.850.000</p>
-                    <a href="#">Ver detalhes</a>
-                </article>
-
-                <article class="carousel-item">
-                    <h3>Apartamento Alto Padrão</h3>
-                    <p>Bairro: Mogilar</p>
-                    <p>3 quartos • varanda gourmet • 2 vagas</p>
-                    <p>R$ 980.000</p>
-                    <a href="#">Ver detalhes</a>
-                </article>
-
-                <article class="carousel-item">
-                    <h3>Terreno em Condomínio 1</h3>
-                    <p>Bairro: Aruã</p>
-                    <p>450m² • condomínio fechado</p>
-                    <p>R$ 420.000</p>
-                    <a href="#">Ver detalhes</a>
-                </article>
-
-                <article class="carousel-item">
-                    <h3>Terreno em Condomínio 2</h3>
-                    <p>Bairro: Aruã</p>
-                    <p>450m² • condomínio fechado</p>
-                    <p>R$ 420.000</p>
-                    <a href="#">Ver detalhes</a>
-                </article>
-
-                <article class="carousel-item">
-                    <h3>Terreno em Condomínio 3</h3>
-                    <p>Bairro: Aruã</p>
-                    <p>450m² • condomínio fechado</p>
-                    <p>R$ 420.000</p>
-                    <a href="#">Ver detalhes</a>
-                </article>
-
-                <article class="carousel-item">
-                    <h3>Terreno em Condomínio 4</h3>
-                    <p>Bairro: Aruã</p>
-                    <p>450m² • condomínio fechado</p>
-                    <p>R$ 420.000</p>
-                    <a href="#">Ver detalhes</a>
-                </article>
-
-                <article class="carousel-item">
-                    <h3>Terreno em Condomínio 5</h3>
-                    <p>Bairro: Aruã</p>
-                    <p>450m² • condomínio fechado</p>
-                    <p>R$ 420.000</p>
-                    <a href="#">Ver detalhes</a>
-                </article>
-
-
-
-
-
+            <!-- O JavaScript inserirá os cards de imóveis aqui -->
             </div>
+
         </section>
 
 
-        <!-- DEPOIMENTOS -->
+        <!-- DEPOIMENTOS 
         <section id="depoimentos">
 
             <h2>O que nossos clientes dizem</h2>
@@ -208,9 +155,9 @@
 
             <p>— Mariana Souza</p>
 
-        </section>
+        </section>-->
 
-        <!-- CONTATO -->
+        <!-- CONTATO 
         <section id="contato">
 
             <h2>Entre em contato</h2>
@@ -258,23 +205,65 @@
 
             </form>
 
-        </section>
+        </section> -->
 
     </main>
 
     <!-- RODAPÉ -->
-    <footer>
+    <footer id="rodape">
+    <div class="container rodape-conteudo">
+        
+        <div class="rodape-logo">
+            <img src="assets/images/fp_offwhite.png" alt="Fran Pereira Corretora - Logo Branca">
+        </div>
 
-        <p>
-            Fran Pereira - Corretora de Imóveis
-        </p>
-
-        <p>
-            Mogi das Cruzes - SP
-        </p>
-
+        <div class="rodape-contato">
+            <h3>Contato</h3>
+            <ul>
+                <li><a href="https://wa.me/5511993966779" target="_blank">WhatsApp: (11) 99396-6779</a></li>
+                <li><a href="https://instagram.com/franpereira.corretora" target="_blank">Instagram: @franpereira.corretora</a></li>
+                <li><a href="mailto:farpservicosimobiliarios@gmail.com">Email: farpservicosimobiliarios@gmail.com</a></li>
+                <li>CRECI: 307546</li>
+            </ul>
+        </div>
+        
+    </div>
+    
+    <div class="rodape-creditos">
+        <p>&copy; 2026 Fran Pereira Corretora. Todos os direitos reservados.</p>
+    </div>
     </footer>
     <script src="./js/analytics.js"></script>
     <script src="./js/main.js"></script>
+    <script src="js/properties.js"></script>
+
+    <!-- MODAL DE DETALHES DO IMÓVEL -->
+    <div id="imovelModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-content">
+        <button class="modal-close" id="modalCloseBtn" aria-label="Fechar galeria">&times;</button>
+        
+        <div class="modal-header">
+        <h3 id="modalTitulo">Título do Imóvel</h3>
+        <p id="modalBairro">Bairro</p>
+        </div>
+
+        <!-- Mídia Principal em Destaque (Imagem ou Vídeo) -->
+        <div class="modal-media-container" id="modalMediaContainer">
+        <img id="modalMainImg" src="" alt="Foto principal do imóvel">
+        </div>
+
+        <!-- Miniaturas da Galeria -->
+        <div class="modal-thumbnails" id="modalThumbnails"></div>
+
+        <!-- Rodapé do Modal com Preço e WhatsApp -->
+        <div class="modal-footer">
+        <span class="modal-preco" id="modalPreco"></span>
+        <a href="#" id="modalBtnWa" target="_blank" rel="noopener noreferrer" class="btn-card">
+            Falar com a Fran no WhatsApp
+        </a>
+        </div>
+    </div>
+    </div>
+
 </body>
 </html>
