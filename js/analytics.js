@@ -1,19 +1,14 @@
-const whatsappButton =
-  document.querySelector("#whatsapp-button");
+/* ===================================
+   TAGS DE ANALYTICS E RASTREAMENTO
+=================================== */
 
-if (whatsappButton) {
-  whatsappButton.addEventListener("click", () => {
-    console.log("WhatsApp Click");
-  });
-}
-
-const params =
-  new URLSearchParams(window.location.search);
-
-const source =
-  params.get("utm_source");
-
-console.log(source);
+// Exemplo: Inicialização do Google Analytics 4 (Substitua G-XXXXXXXXXX pelo seu ID)
+/*
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+*/
 
 
 

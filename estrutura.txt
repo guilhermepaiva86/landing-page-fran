@@ -1,0 +1,26 @@
+.
+├── assets
+│   ├── images
+│   │   ├── chave1-moldura.png
+│   │   ├── chave1.png
+│   │   ├── chave-icone-offwhite.png
+│   │   ├── fp_offwhite.png
+│   │   ├── fran.webp
+│   │   └── logo-offwhite.png
+│   └── imoveis
+├── css
+│   ├── components.css
+│   ├── layout.css
+│   ├── reset.css
+│   ├── style.css
+│   └── variables.css
+├── estrutura.txt
+├── index.html
+└── js
+    ├── analytics.js
+    ├── form.js
+    ├── main.js
+    ├── properties.js
+    └── whatsapp.js
+
+6 directories, 18 files

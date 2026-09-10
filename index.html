@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Meta Pixel -->
-    <!-- Google Analytics -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fran Pereira</title>
+    <title>Fran Pereira | Corretora de Imóveis em Mogi das Cruzes</title>
+    <meta name="description" content="Compra, venda e investimento imobiliário com atendimento personalizado em Mogi das Cruzes e região. Sem pressa e sem pressão.">
+
+    <!-- Open Graph / WhatsApp Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fran Pereira | Corretora de Imóveis">
+    <meta property="og:description" content="Encontre o imóvel certo para sua família e seus objetivos com atendimento personalizado em Mogi das Cruzes.">
+    <meta property="og:image" content="assets/images/logo-offwhite.png">
 
     <!-- Font Awesome para os Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <!-- CSS do Projeto -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -19,251 +25,224 @@
 </head>
 
 <body>
-     <!-- CABEÇALHO -->
+    <!-- CABEÇALHO -->
     <header>
         <div class="header-container">
             <div class="header-top">
-
-                <p>
-                    Corretora de imóveis em Mogi das Cruzes - SP
-                </p>
+                <p>Corretora de imóveis em Mogi das Cruzes - SP</p>
             </div>
 
             <img src="assets/images/logo-offwhite.png" alt="Fran Pereira - Corretora de Imóveis">
 
             <nav>
                 <a href="#sobre">Sobre</a>
-                <a href="#imoveis">Imóveis</a>
-                <!-- <a href="#depoimentos">Depoimentos</a> -->
-                <!-- <a href="#contato">Contato</a> -->
+                <a href="#diferenciais">Missão</a>
+                <a href="#depoimentos">Depoimentos</a>
             </nav>
         </div>
     </header>
 
     <main>
-
         <!-- HERO -->
         <section class="hero">
-        <div class="container">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Encontre o imóvel certo para sua família e seus objetivos
+                        </h1>
+                        <p class="hero-description">
+                            Compra, venda e investimento imobiliário com atendimento personalizado
+                        </p>
+                        <div class="hero-actions">
+                            <a
+                                href="https://wa.me/5511993966779?text=Ol%C3%A1%2C%20Fran!%20Gostaria%20de%20conversar%20sobre%20uma%20consultoria%20imobili%C3%A1ria."
+                                class="btn-primary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+                            </a>
 
-            <div class="hero-content">
-
-                <div class="hero-text">
-
-                    <h1 class="hero-title">
-                    Encontre o imóvel certo para sua família e seus objetivos
-                    </h1>
-
-                    <p class="hero-description">
-                    Compra, venda e investimento imobiliário com atendimento personalizado
-                    </p>
-
-                
-                    <div class="hero-actions">
-
-                        <a
-                            href="https://wa.me/5511993966779?text=Ol%C3%A1%2C%20Fran!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20im%C3%B3veis."
-                            class="btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
-                        </a>
-
-                        <a
-                            href="#imoveis"
-                            class="btn-primary"
-                        >
-                            <i class="fa-solid fa-key"></i>Ver imóveis
-                        </a>
-
+                            <a
+                                href="https://www.instagram.com/franpereira.corretora" 
+                                class="btn-primary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i class="fa-brands fa-instagram"></i> Acompanhar no Instagram
+                            </a>
+                        </div>
                     </div>
+
+                    <div class="hero-image">
+                        <img src="./assets/images/fran.webp" alt="Fran Pereira Corretora">
+                    </div>
+
+                    <ul class="hero-benefits">
+                        <li>Atendimento personalizado</li>
+                        <li>Imóveis selecionados para seu perfil</li>
+                        <li>Suporte completo ao financiamento</li>
+                    </ul>                       
                 </div>
-
-                <div class="hero-image">
-
-                <img
-                src="./assets/images/fran.webp"
-                alt="Fran Pereira Corretora"
-                >
-
-                </div>
-
-                <ul class="hero-benefits">
-                    <li>Atendimento personalizado</li>
-                    <li>Imóveis selecionados para seu perfil</li>
-                    <li>Suporte completo ao financiamento</li>
-                </ul>                       
-            </div>
-        </div>  
+            </div>  
         </section>
+
+        <hr class="tarja-divisoria">
 
         <!-- SOBRE -->
         <section id="sobre">
             <div class="container sobre-conteudo">
-        
                 <div class="sobre-logo">
                     <img src="assets/images/chave1.png" alt="Fran Pereira - Corretora de Imóveis em Mogi das Cruzes">
                 </div>
 
-            <div class="sobre-textos">
-                <h2>Sobre</h2>
-                
-                <p>
-                    Oferecemos um atendimento imobiliário para quem entende que comprar ou vender um imóvel é mais do que uma transação
-                </p>
-                
-                <p>
-                    Sem pressa, sem pressão e com a responsabilidade de quem sabe que está lidando com histórias, sonhos e novos começos
-                </p>
-            </div>
-        
+                <div class="sobre-textos">
+                    <h2>Sobre</h2>
+                    <p>
+                        Oferecemos um atendimento imobiliário para quem entende que comprar ou vender um imóvel é mais do que uma transação.
+                    </p>
+                    <p>
+                        Sem pressa, sem pressão e com a responsabilidade de quem sabe que está lidando com histórias, sonhos e novos começos.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- IMÓVEIS -->
-        <section id="imoveis" class="carousel-container">
+        <hr class="tarja-divisoria">
 
-            <h2>Imóveis em Destaque</h2>
+        <!-- VALORES E DIFERENCIAIS -->
+        <section id="diferenciais" class="secao-diferenciais">
+            <div class="container">
+                <div class="diferenciais-cabecalho">
+                    <h2 class="diferenciais-titulo">Nossa Missão</h2>
+                    <p class="diferenciais-subtitulo">
+                        Conectar pessoas às melhores oportunidades através de uma rede sólida de parcerias e um olhar dedicado a cada detalhe.
+                    </p>
+                    <span class="diferenciais-tagline">Nossos Valores</span>
+                </div>
 
-            <!-- Botões de Controle -->
-            <button class="carousel-btn prev" id="prevBtn" aria-label="Imóvel anterior">&#10094;</button>
-            <button class="carousel-btn next" id="nextBtn" aria-label="Próximo imóvel">&#10095;</button>
+                <div class="diferenciais-grid">
+                    <article class="card-diferencial">
+                        <div class="card-icone">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Rede Ampla de Parcerias</h3>
+                        <p>
+                            Atuamos de forma independente, não ficamos presos a uma carteira engessada. Buscamos e encontramos o imóvel ideal para você através de parcerias com as melhores imobiliárias e corretores da região.
+                        </p>
+                    </article>
 
-            <!-- Trilho do Carrossel (preenchido dinamicamente pelo properties.js) -->
-            <div class="carousel-track" id="carouselTrack">
-            <!-- O JavaScript inserirá os cards de imóveis aqui -->
+                    <article class="card-diferencial">
+                        <div class="card-icone">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Sem Pressa, Sem Pressão</h3>
+                        <p>
+                            Entendemos que decisões importantes exigem maturidade. Respeitamos o seu tempo e o seu ritmo em cada etapa da negociação.
+                        </p>
+                    </article>
+
+                    <article class="card-diferencial">
+                        <div class="card-icone">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Segurança e Confiança</h3>
+                        <p>
+                            Escutamos ativamente para filtrar e apresentar apenas o que realmente faz sentido para o seu momento de vida e cuidamos de toda a burocracia, documentação e alinhamento de expectativas entre as partes.
+                        </p>
+                    </article>
+                </div>
+
+                <!-- CTA de Fechamento da Seção -->
+                <div class="diferenciais-cta">
+                    <p>Procurando um imóvel específico ou quer colocar o seu à venda?</p>
+                    <a href="https://wa.me/5511993966779?text=Ol%C3%A1%20Fran,%20gostaria%20de%20conversar%20sobre%20uma%20consultoria%20imobili%C3%A1ria" target="_blank" rel="noopener noreferrer" class="btn-diferencial">
+                        Falar com a Fran no WhatsApp
+                    </a>
+                </div>
             </div>
-
         </section>
 
+        <hr class="tarja-divisoria">
 
-        <!-- DEPOIMENTOS 
-        <section id="depoimentos">
-
-            <h2>O que nossos clientes dizem</h2>
-
-            <blockquote>
-                "Excelente atendimento e total suporte durante toda a compra."
-            </blockquote>
-
-            <p>— Carlos e Fernanda</p>
-
-            <blockquote>
-                "Encontramos nossa casa ideal com muita tranquilidade."
-            </blockquote>
-
-            <p>— Mariana Souza</p>
-
-        </section>-->
-
-        <!-- CONTATO 
-        <section id="contato">
-
-            <h2>Entre em contato</h2>
-
-            <form  id="formContato">
-
-                <input
-                    type="hidden"
-                    name="source"
-                    value="landing-page"
-                />
-                <div>
-                    <label for="nome">Nome</label>
-
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                    >
+        <!-- SEÇÃO DEPOIMENTOS -->
+        <section id="depoimentos" class="secao-depoimentos">
+            <div class="container">
+                <div class="depoimentos-cabecalho">
+                    <h2 class="depoimentos-titulo">O que dizem sobre o nosso atendimento</h2>
+                    <p class="depoimentos-subtitulo">
+                        A maior satisfação do nosso trabalho é fazer parte de novos começos e conquistas seguras.
+                    </p>
                 </div>
 
-                <div>
-                    <label for="telefone">Telefone</label>
+                <!-- CAIXA / FORMULÁRIO PARA DEIXAR DEPOIMENTO -->
+                <div class="depoimento-form-container">
+                    <div class="form-chamada">
+                        <h3>Como foi sua experiência?</h3>
+                        <p>Compartilhe e ajude outras pessoas a realizarem seus objetivos com segurança.</p>
+                    </div>
 
-                    <input
-                        type="tel"
-                        id="telefone"
-                        name="telefone"
-                    >
+                    <form id="formDepoimento" class="form-depoimento">
+                        <div class="form-grupo">
+                            <label for="depoimentoNome">Seu Nome completo</label>
+                            <input type="text" id="depoimentoNome" placeholder="Ex: Ana Maria Souza" required>
+                        </div>
 
+                        <div class="form-grupo">
+                            <label for="depoimentoRelacao">O que você realizou com a Fran?</label>
+                            <input type="text" id="depoimentoRelacao" placeholder="Ex: Comprei meu imóvel / Vendi meu imóvel" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="depoimentoTexto">Seu Depoimento</label>
+                            <textarea id="depoimentoTexto" rows="4" placeholder="Conte como foi o atendimento, o acompanhamento e a experiência..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-enviar-depoimento">
+                            Enviar Depoimento via WhatsApp
+                        </button>
+                    </form>
                 </div>
-
-                <div>
-                    <label for="mensagem">Mensagem</label>
-
-                    <textarea
-                        id="mensagem"
-                        name="mensagem"
-                    ></textarea>
-                </div>
-
-                <button type="submit">
-                    Enviar
-                </button>
-
-            </form>
-
-        </section> -->
-
+            </div>
+        </section>
     </main>
 
     <!-- RODAPÉ -->
     <footer id="rodape">
-    <div class="container rodape-conteudo">
-        
-        <div class="rodape-logo">
-            <img src="assets/images/fp_offwhite.png" alt="Fran Pereira Corretora - Logo Branca">
-        </div>
+        <div class="container rodape-conteudo">
+            <div class="rodape-logo">
+                <img src="assets/images/fp_offwhite.png" alt="Fran Pereira Corretora - Logo Branca">
+            </div>
 
-        <div class="rodape-contato">
-            <h3>Contato</h3>
-            <ul>
-                <li><a href="https://wa.me/5511993966779" target="_blank">WhatsApp: (11) 99396-6779</a></li>
-                <li><a href="https://instagram.com/franpereira.corretora" target="_blank">Instagram: @franpereira.corretora</a></li>
-                <li><a href="mailto:farpservicosimobiliarios@gmail.com">Email: farpservicosimobiliarios@gmail.com</a></li>
-                <li>CRECI: 307546</li>
-            </ul>
+            <div class="rodape-contato">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="https://wa.me/5511993966779" target="_blank" rel="noopener noreferrer">WhatsApp: (11) 99396-6779</a></li>
+                    <li><a href="https://instagram.com/franpereira.corretora" target="_blank" rel="noopener noreferrer">Instagram: @franpereira.corretora</a></li>
+                    <li><a href="mailto:farpservicosimobiliarios@gmail.com">Email: farpservicosimobiliarios@gmail.com</a></li>
+                    <li>CRECI: 307546</li>
+                </ul>
+            </div>
         </div>
         
-    </div>
-    
-    <div class="rodape-creditos">
-        <p>&copy; 2026 Fran Pereira Corretora. Todos os direitos reservados.</p>
-    </div>
+        <div class="rodape-creditos">
+            <p>&copy; 2026 Fran Pereira Corretora. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <!-- SCRIPTS -->
     <script src="./js/analytics.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="js/properties.js"></script>
-
-    <!-- MODAL DE DETALHES DO IMÓVEL -->
-    <div id="imovelModal" class="modal-overlay" aria-hidden="true">
-    <div class="modal-content">
-        <button class="modal-close" id="modalCloseBtn" aria-label="Fechar galeria">&times;</button>
-        
-        <div class="modal-header">
-        <h3 id="modalTitulo">Título do Imóvel</h3>
-        <p id="modalBairro">Bairro</p>
-        </div>
-
-        <!-- Mídia Principal em Destaque (Imagem ou Vídeo) -->
-        <div class="modal-media-container" id="modalMediaContainer">
-        <img id="modalMainImg" src="" alt="Foto principal do imóvel">
-        </div>
-
-        <!-- Miniaturas da Galeria -->
-        <div class="modal-thumbnails" id="modalThumbnails"></div>
-
-        <!-- Rodapé do Modal com Preço e WhatsApp -->
-        <div class="modal-footer">
-        <span class="modal-preco" id="modalPreco"></span>
-        <a href="#" id="modalBtnWa" target="_blank" rel="noopener noreferrer" class="btn-card">
-            Falar com a Fran no WhatsApp
-        </a>
-        </div>
-    </div>
-    </div>
-
+    <script src="./js/whatsapp.js"></script>
 </body>
 </html>
