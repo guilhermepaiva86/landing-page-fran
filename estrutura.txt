@@ -1,26 +1,64 @@
 .
 ├── assets
-│   ├── images
-│   │   ├── chave1-moldura.png
-│   │   ├── chave1.png
-│   │   ├── chave-icone-offwhite.png
-│   │   ├── fp_offwhite.png
-│   │   ├── fran.webp
-│   │   └── logo-offwhite.png
-│   └── imoveis
+│   └── images
+│       ├── chave1-moldura.png
+│       ├── chave1.png
+│       ├── chave-icone-offwhite.png
+│       ├── favicon.png
+│       ├── fp_offwhite.png
+│       ├── fran.webp
+│       ├── imovel1
+│       │   ├── Beach.jpeg
+│       │   ├── Fachada.mp4
+│       │   ├── Fachada.png
+│       │   ├── Futebol.jpeg
+│       │   ├── Lazer.jpeg
+│       │   ├── Lote.jpeg
+│       │   └── Tenis.jpeg
+│       ├── imovel2
+│       │   ├── 10.jpeg
+│       │   ├── 11.jpeg
+│       │   ├── 3.jpeg
+│       │   ├── 5.jpeg
+│       │   ├── 6.jpeg
+│       │   ├── Area Gourmet.jpeg
+│       │   ├── Banheiro.jpeg
+│       │   ├── Escritorio.jpeg
+│       │   ├── Fachada.jpeg
+│       │   ├── Garagem.jpeg
+│       │   ├── Quarto.jpeg
+│       │   └── Suíte.jpeg
+│       ├── imovel3
+│       │   ├── 11.jpeg
+│       │   ├── 12.jpeg
+│       │   ├── 3.jpeg
+│       │   ├── Closet.jpeg
+│       │   ├── Cozinha.jpeg
+│       │   ├── Hall.jpeg
+│       │   ├── Lareira.jpeg
+│       │   ├── Lavabo.jpeg
+│       │   ├── Mesanino.jpeg
+│       │   ├── Quarto 1.jpeg
+│       │   ├── Quarto 2.jpeg
+│       │   ├── Suíte.jpeg
+│       │   └── Tour.mp4
+│       └── logo-offwhite.png
 ├── css
-│   ├── components.css
-│   ├── layout.css
-│   ├── reset.css
-│   ├── style.css
-│   └── variables.css
+│   ├── components.css
+│   ├── imovel-apresentacao.css
+│   ├── layout.css
+│   ├── reset.css
+│   ├── style.css
+│   └── variables.css
 ├── estrutura.txt
+├── imoveis
+│   ├── imovel1.html
+│   ├── imovel2.html
+│   └── imovel3.html
 ├── index.html
 └── js
     ├── analytics.js
     ├── form.js
+    ├── imovel-apresentacao.js
     ├── main.js
-    ├── properties.js
     └── whatsapp.js
-
-6 directories, 18 files

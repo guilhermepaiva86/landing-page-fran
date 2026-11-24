@@ -1,0 +1,677 @@
+/* ==========================================================================
+   PÁGINA DE APRESENTAÇÃO DE IMÓVEL DE ALTO PADRÃO (MOBILE-FIRST)
+   Fran Soluções Imobiliárias
+   ========================================================================== */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body, 'Inter', -apple-system, sans-serif);
+    background-color: var(--color-off-white, #ede8df);
+    color: var(--color-marrom-terroso, #352118);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* Header Fixo sem Menu */
+.header-imovel {
+    background-color: var(--color-verde-profundo, #2c3d26);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-logo .logo-img {
+    height: 55px;
+    width: auto;
+    display: block;
+}
+
+.btn-header-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background-color: var(--color-creme, #cfc9bd);
+    color: var(--color-verde-profundo, #2c3d26);
+    border: 1px solid var(--color-creme, #cfc9bd);
+    padding: 0.45rem 1rem;
+    border-radius: 20px;
+    font-size: 0.825rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.btn-header-home:hover {
+    background-color: var(--color-off-white, #ede8df);
+    border-color: var(--color-off-white, #ede8df);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 520px) {
+    .header-container {
+        padding: 0 1rem;
+    }
+
+    .header-logo .logo-img {
+        height: 44px;
+    }
+
+    .btn-header-home {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.775rem;
+    }
+}
+
+/* Hero Title */
+.imovel-hero {
+    padding: 2rem 0 1.25rem 0;
+}
+
+.imovel-tagline {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-verde-profundo, #2c3d26);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.imovel-titulo {
+    font-family: var(--font-title, 'Playfair Display', serif);
+    font-size: 2rem;
+    color: var(--color-verde-profundo, #2c3d26);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.imovel-endereco {
+    font-size: 0.95rem;
+    color: var(--color-marrom-terroso, #352118);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+/* ==========================================================================
+   CARROSSEL DA GALERIA DE FOTOS
+   ========================================================================== */
+.imovel-galeria-section {
+    padding: 1rem 0 1.5rem 0;
+}
+
+.galeria-cabecalho {
+    padding: 0 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.galeria-instrucao {
+    font-size: 0.8rem;
+    color: var(--color-cinza-fendi, #a59b91);
+    display: block;
+    margin-top: -0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.carousel-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.galeria-carousel-track {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5rem 1.25rem 1rem 1.25rem;
+    scrollbar-width: none; /* Oculta barra no Firefox */
+}
+
+.galeria-carousel-track::-webkit-scrollbar {
+    display: none; /* Oculta barra no Chrome/Safari */
+}
+
+.galeria-item {
+    flex: 0 0 85%; /* No celular ocupa quase a largura inteira para facilitar visualização */
+    max-width: 380px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 16/11;
+    cursor: pointer;
+    background-color: var(--color-creme, #cfc9bd);
+    scroll-snap-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background-color: #000;
+}
+
+.video-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(44, 61, 38, 0.88);
+    color: var(--color-off-white, #ede8df);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding-left: 3px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+.galeria-badge {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    background-color: rgba(44, 61, 38, 0.85);
+    color: var(--color-off-white, #ede8df);
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+/* Botões de Navegação Laterais (Ocultos em telas muito pequenas, visíveis com toque/desktop) */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(44, 61, 38, 0.85);
+    color: #ffffff;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease;
+}
+
+.carousel-btn:hover {
+    background-color: var(--color-verde-profundo, #2c3d26);
+}
+
+.carousel-btn.prev {
+    left: 0.5rem;
+}
+
+.carousel-btn.next {
+    right: 0.5rem;
+}
+
+/* Ajustes Responsivos para Telas Maiores */
+@media (min-width: 768px) {
+    .galeria-item {
+        flex: 0 0 420px; /* Cards maiores no desktop */
+    }
+    .galeria-carousel-track {
+        padding: 0.5rem calc((100% - 800px) / 2 + 1.25rem) 1rem calc((100% - 800px) / 2 + 1.25rem);
+    }
+}
+
+/* Números Principais */
+.imovel-numeros-section {
+    padding: 0.5rem 0 1.5rem 0;
+}
+
+.numeros-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.numero-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(165, 155, 145, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.numero-card:last-child {
+    grid-column: span 2;
+}
+
+.numero-rotulo {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--color-cinza-fendi, #a59b91);
+    letter-spacing: 0.5px;
+    margin-bottom: 0.2rem;
+}
+
+.numero-valor {
+    font-family: var(--font-title, 'Playfair Display', serif);
+    font-size: 1.5rem;
+    color: var(--color-verde-profundo, #2c3d26);
+    display: block;
+}
+
+.numero-valor small {
+    font-family: var(--font-body, 'Inter', sans-serif);
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: var(--color-marrom-terroso, #352118);
+}
+
+/* Descrição Humana */
+.imovel-descricao-section {
+    padding: 1rem 0;
+}
+
+.card-descricao {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--color-verde-profundo, #2c3d26);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.card-descricao h2 {
+    font-family: var(--font-title, 'Playfair Display', serif);
+    color: var(--color-verde-profundo, #2c3d26);
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.card-descricao p {
+    font-size: 0.95rem;
+    color: var(--color-marrom-terroso, #352118);
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.card-descricao p:last-child {
+    margin-bottom: 0;
+}
+
+/* Diferenciais */
+.imovel-diferenciais-section {
+    padding: 1.5rem 0;
+}
+
+.secao-titulo {
+    font-family: var(--font-title, 'Playfair Display', serif);
+    font-size: 1.4rem;
+    color: var(--color-verde-profundo, #2c3d26);
+    margin-bottom: 1rem;
+}
+
+.secao-subtitulo {
+    font-size: 0.875rem;
+    color: var(--color-cinza-fendi, #a59b91);
+    margin-top: -0.75rem;
+    margin-bottom: 1rem;
+}
+
+.diferenciais-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.diferenciais-lista li {
+    background-color: #ffffff;
+    padding: 0.85rem 1rem 0.85rem 2.4rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    position: relative;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.diferenciais-lista li::before {
+    content: "✓";
+    position: absolute;
+    left: 0.9rem;
+    top: 0.85rem;
+    color: var(--color-verde-profundo, #2c3d26);
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   MAPA DA REGIÃO (GOOGLE MAPS WIDGET)
+   ========================================================================== */
+.imovel-mapa-section {
+    padding: 1.5rem 0;
+}
+
+.mapa-wrapper {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid rgba(165, 155, 145, 0.2);
+    width: 100%;
+}
+
+.mapa-wrapper iframe {
+    width: 100%;
+    height: 300px;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .mapa-wrapper iframe {
+        height: 380px;
+    }
+}
+
+
+/* Localização */
+.imovel-localizacao-section {
+    padding: 1.5rem 0;
+}
+
+.distancias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.distancia-card {
+    background-color: #ffffff;
+    padding: 0.85rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.distancia-tempo {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-vinho, #3d1515);
+}
+
+.distancia-local {
+    font-size: 0.8rem;
+    color: var(--color-marrom-terroso, #352118);
+}
+
+/* Financeiro */
+.imovel-financeiro-section {
+    padding: 1.5rem 0 2.5rem 0;
+}
+
+.card-financeiro {
+    background-color: var(--color-verde-profundo, #2c3d26);
+    color: var(--color-off-white, #ede8df);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.financeiro-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-creme, #cfc9bd);
+    display: block;
+}
+
+.financeiro-preco {
+    font-family: var(--font-title, 'Playfair Display', serif);
+    font-size: 2.1rem;
+    color: #ffffff;
+    margin: 0.25rem 0;
+}
+
+.financeiro-m2 {
+    font-size: 0.85rem;
+    color: var(--color-creme, #cfc9bd);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(237, 232, 223, 0.2);
+}
+
+.financeiro-detalhes {
+    margin-bottom: 1.25rem;
+}
+
+.financeiro-linha {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.btn-financeiro-wa {
+    display: block;
+    width: 100%;
+    background-color: var(--color-creme, #cfc9bd);
+    color: var(--color-verde-profundo, #2c3d26);
+    text-align: center;
+    padding: 0.9rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-financeiro-wa:active {
+    transform: scale(0.98);
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.92);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.lightbox-modal.active {
+    display: flex;
+}
+
+.lightbox-modal img {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 6px;
+    object-fit: contain;
+}
+
+.lightbox-fechar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: #ffffff;
+    font-size: 2.2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.lightbox-modal video,
+.lightbox-modal iframe {
+    max-width: 100%;
+    max-height: 85vh;
+    width: 100%;
+    border-radius: 6px;
+    background-color: #000;
+}
+
+.lightbox-modal iframe {
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+/* Flutuante WhatsApp */
+.wa-float {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 56px;
+    height: 56px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    z-index: 99;
+}
+
+/* =========================
+   RODAPÉ 
+========================= */
+#rodape {
+  background-color: var(--color-marrom-terroso, #352118);
+  color: var(--color-white);
+  padding: var(--space-xs) var(--space-sm);
+}
+
+.rodape-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rodape-logo img {
+  max-width: 160px;
+  height: auto;
+  display: block;
+}
+
+.rodape-contato h3 {
+  font-family: var(--font-titles);
+  font-size: 1.25rem;
+  color: var(--color-accent);
+  margin: 0 0 0.5rem 0;
+}
+
+.rodape-contato ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rodape-contato li, 
+.rodape-contato a {
+  font-family: var(--font-base);
+  color: var(--color-white);
+  text-decoration: none;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.rodape-contato a:hover {
+  color: var(--color-olive); 
+}
+
+.rodape-creditos {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(237, 232, 223, 0.15);
+}
+
+.rodape-creditos p {
+  font-family: var(--font-base);
+  font-size: 0.8rem;
+  color: var(--color-fendy);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .rodape-conteudo {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+/* Responsivo para Desktop (Telas a partir de 768px) */
+@media (min-width: 768px) {
+    .numeros-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .numero-card:last-child {
+        grid-column: span 1;
+    }
+    .planta-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .planta-imagem-wrapper {
+        margin-bottom: 0;
+    }
+    .distancias-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Fran Pereira | Corretora de Imóveis em Mogi das Cruzes</title>
-    <meta name="description" content="Compra, venda e investimento imobiliário com atendimento personalizado em Mogi das Cruzes e região. Sem pressa e sem pressão.">
+    <meta name="description" content="Compra, venda e investimento imobiliário com atendimento personalizado em Mogi das Cruzes e região.">
 
     <!-- Open Graph / WhatsApp Preview -->
     <meta property="og:type" content="website">
@@ -40,7 +40,7 @@
             <nav>
                 <a href="#sobre">Sobre</a>
                 <a href="#diferenciais">Missão</a>
-                <a href="#depoimentos">Depoimentos</a>
+                <a href="#imoveis-destaque">Destaques</a>
             </nav>
         </div>
     </header>
@@ -86,6 +86,7 @@
                         <li>Atendimento personalizado</li>
                         <li>Imóveis selecionados para seu perfil</li>
                         <li>Suporte completo ao financiamento</li>
+                        <li>Acompanhamento pós-venda até a entrega da chave</li>
                     </ul>                       
                 </div>
             </div>  
@@ -106,7 +107,7 @@
                         Oferecemos um atendimento imobiliário para quem entende que comprar ou vender um imóvel é mais do que uma transação.
                     </p>
                     <p>
-                        Sem pressa, sem pressão e com a responsabilidade de quem sabe que está lidando com histórias, sonhos e novos começos.
+                        Com a responsabilidade e dedicação de quem sabe que está lidando com histórias, sonhos e patrimônio.
                     </p>
                 </div>
             </div>
@@ -120,7 +121,7 @@
                 <div class="diferenciais-cabecalho">
                     <h2 class="diferenciais-titulo">Nossa Missão</h2>
                     <p class="diferenciais-subtitulo">
-                        Conectar pessoas às melhores oportunidades através de uma rede sólida de parcerias e um olhar dedicado a cada detalhe.
+                        Conectar pessoas às melhores oportunidades com curadoria precisa, inteligência de mercado e um olhar dedicado a cada detalhe.
                     </p>
                     <span class="diferenciais-tagline">Nossos Valores</span>
                 </div>
@@ -135,22 +136,23 @@
                                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                             </svg>
                         </div>
-                        <h3>Rede Ampla de Parcerias</h3>
+                        <h3>Atendimento Consultivo e Independente</h3>
                         <p>
-                            Atuamos de forma independente, não ficamos presos a uma carteira engessada. Buscamos e encontramos o imóvel ideal para você através de parcerias com as melhores imobiliárias e corretores da região.
+                            Atuação com total autonomia e foco exclusivo nos interesses do cliente. Buscamos ativamente o imóvel ideal em todo o mercado regional com um olhar crítico e criterioso.
                         </p>
                     </article>
 
                     <article class="card-diferencial">
                         <div class="card-icone">
+                            <!-- Ícone de Bússola: simboliza direcionamento, orientação e condução estratégica -->
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
                             </svg>
                         </div>
-                        <h3>Sem Pressa, Sem Pressão</h3>
+                        <h3>Condução Estratégica</h3>
                         <p>
-                            Entendemos que decisões importantes exigem maturidade. Respeitamos o seu tempo e o seu ritmo em cada etapa da negociação.
+                            Direcionamento especializado da primeira visita à assinatura do contrato, com acompanhamento completo de toda a negociação e suporte em todas as etapas.
                         </p>
                     </article>
 
@@ -167,11 +169,52 @@
                     </article>
                 </div>
 
+                <!-- CARROSSEL DE IMÓVEIS EM DESTAQUE -->
+                <section class="imovel-galeria-section" id="imoveis-destaque">
+                    <div class="galeria-cabecalho">
+                        <h2 class="secao-titulo">Imóveis em destaque</h2>
+                        <span class="galeria-instrucao">Deslize para ver mais ou toque para conhecer</span>
+                    </div>
+
+                    <div class="carousel-wrapper">
+                        <!-- Botões de Navegação -->
+                        <button type="button" class="carousel-btn prev" id="prevBtn" aria-label="Imóvel anterior">&#10094;</button>
+                        <button type="button" class="carousel-btn next" id="nextBtn" aria-label="Próximo imóvel">&#10095;</button>
+
+                        <!-- Trilho do Carrossel -->
+                        <div class="galeria-carousel-track" id="carouselTrack">
+                            <a href="imoveis/imovel1.html" class="galeria-item">
+                                <img src="assets/images/imovel1/Lote.jpeg" alt="Lote no Real Park II" loading="lazy">
+                                <div class="galeria-badge">Lote no Real Park II</div>
+                            </a>
+
+                            <a href="imoveis/imovel2.html" class="galeria-item">
+                                <img src="assets/images/imovel2/Fachada.jpeg" alt="Casa em Condomínio Fechado" loading="lazy">
+                                <div class="galeria-badge">Casa em Condomínio Fechado</div>
+                            </a>
+
+                            <a href="imoveis/imovel3.html" class="galeria-item">
+                                <img src="assets/images/imovel3/Hall.jpeg" alt="Casa no Real Park Vila Oliveira" loading="lazy">
+                                <div class="galeria-badge">Casa no Real Park Vila Oliveira</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Destaque ao final da seção -->
+                    <div class="destaque-busca">
+                        <p class="destaque-busca-texto">
+                            Não encontrou o que procurava? <strong>Encontramos pra você!</strong>
+                        </p>
+                        <a href="https://wa.me/5511993966779?text=Ol%C3%A1%20Fran,%20n%C3%A3o%20encontrei%20o%20im%C3%B3vel%20que%20procurava%20no%20site%20e%20gostaria%20de%20ajuda%20para%20encontrar!" target="_blank" rel="noopener noreferrer" class="btn-destaque-busca">
+                            <i class="fa-brands fa-whatsapp"></i> Falar com a Fran no WhatsApp
+                        </a>
+                    </div>
+                </section>
                 <!-- CTA de Fechamento da Seção -->
-                <div class="diferenciais-cta">
-                    <p>Procurando um imóvel específico ou quer colocar o seu à venda?</p>
+                <div class="destaque-busca">
+                    <p class="destaque-busca-texto">Quer colocar o seu imóvel à venda sem complicações?</p>
                     <a href="https://wa.me/5511993966779?text=Ol%C3%A1%20Fran,%20gostaria%20de%20conversar%20sobre%20uma%20consultoria%20imobili%C3%A1ria" target="_blank" rel="noopener noreferrer" class="btn-diferencial">
-                        Falar com a Fran no WhatsApp
+                        <i class="fa-brands fa-whatsapp"></i> Agende uma consultoria gratuita!
                     </a>
                 </div>
             </div>
@@ -180,7 +223,7 @@
         <hr class="tarja-divisoria">
 
         <!-- SEÇÃO DEPOIMENTOS -->
-        <section id="depoimentos" class="secao-depoimentos">
+        <!-- <section id="depoimentos" class="secao-depoimentos">
             <div class="container">
                 <div class="depoimentos-cabecalho">
                     <h2 class="depoimentos-titulo">O que dizem sobre o nosso atendimento</h2>
@@ -188,8 +231,6 @@
                         A maior satisfação do nosso trabalho é fazer parte de novos começos e conquistas seguras.
                     </p>
                 </div>
-
-                <!-- CAIXA / FORMULÁRIO PARA DEIXAR DEPOIMENTO -->
                 <div class="depoimento-form-container">
                     <div class="form-chamada">
                         <h3>Como foi sua experiência?</h3>
@@ -218,7 +259,7 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
 
     <!-- RODAPÉ -->
@@ -234,18 +275,18 @@
                     <li><a href="https://wa.me/5511993966779" target="_blank" rel="noopener noreferrer">WhatsApp: (11) 99396-6779</a></li>
                     <li><a href="https://instagram.com/franpereira.corretora" target="_blank" rel="noopener noreferrer">Instagram: @franpereira.corretora</a></li>
                     <li><a href="mailto:farpservicosimobiliarios@gmail.com">Email: farpservicosimobiliarios@gmail.com</a></li>
-                    <li>CRECI: 307546</li>
                 </ul>
             </div>
         </div>
         
         <div class="rodape-creditos">
-            <p>&copy; 2026 Fran Pereira Corretora. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Fran Pereira Corretora. Todos os direitos reservados. CRECI: 307546 CNPJ: 67.897.220/0001-30</p>
         </div>
     </footer>
 
     <!-- SCRIPTS -->
     <script src="./js/analytics.js"></script>
     <script src="./js/whatsapp.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
